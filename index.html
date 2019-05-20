@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Jasonkay 💗 Lin</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="fonts/fontCss.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/music.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* We are both SCUTers and masters,</span><br />
+				<span class="space"/><span class="comments">* so I wrote some code to celebrate our first 520 anniversary.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Jasonkay"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Lin Gu-ye"</span>);<br />
+				<span class="comments">// Sep 10, 2018, I met you in the Teacher's day first time. </span><br />
+				i.meet(u);<br />
+				<span class="comments">// Ever since when, i fell in love with you.  </span><br />
+				i.fellInLoveWith(u);<br />
+				<span class="comments">// From then on, i tried sevaral times to chase you, but you all refused. </span><br />
+				u.refuse(i);<br />
+				<span class="comments">// After so many time fuilures, finally, you accepted and became my girlfriend eversince.</span><br />
+				u.accepted();<br />
+				<span class="comments">// Since then, I miss u every day.</span><br />
+				i.miss(u);<br />
+				<span class="comments">// And take care of u and our love.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// There shall be so many difficulties along the way. </span><br />
+				<span class="keyword">boolean</span> hasDifficulty = <span class="keyword">true</span>;<br />
+				<span class="comments">// But as long as we two all together, there would be no problem then. </span><br />
+				<span class="keyword">if</span> (isTogether(u, i)) {<br />
+				<span class="placeholder"/>hasDifficulty = false;<br />
+				}<br />
+				<span class="comments">// Since the time we were together, my life became full of love. </span><br />
+				Life life = <span class="keyword">new</span> Life(<span class="string">"Love"</span>);<br />
+				<span class="comments">// Let us be together forever and live happily ever after. </span><br />
+				<span class="keyword">while</span> (true) {<br />
+				<span class="placeholder"/>life.liveHappilyEveryday(i, u);<br />
+				}<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Lin Gu-ye, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Jasonkay</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="music-bg" style="height: 100%;filter: blur(100px);transition:all 0.3s" id="music-bg">
+			<div class="music-mask"></div>
+		</div>
+
+
+		<div id="copyright">
+				<span id="showsectime" style="color:#707070;font-size: 14px;">本网页已萌萌哒运行0天0小时0分0秒</span><i class="fa fa-heart throb" style="color:#d43f57">❤</i><br />
+			Inspired by <a href="https://github.com/hackerzhou/Love/">hackerzhou's</a> github.<br />
+			Copyright © 2019 <a href='http://www.jasonkayzk666.club/'>Jasonkay's blog </a> 2018-2019. <br /><br />
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function NewDate(str) { 
+			str = str.split('-');
+			var date = new Date(); 
+			date.setUTCFullYear(str[0], str[1] - 1, str[2]); 
+			date.setUTCHours(0, 0, 0, 0); 
+			return date; 
+		} 
+		function showsectime() {
+			var birthDay = NewDate("2019-05-20");
+			var today=new Date();
+			var timeold= (today.getTime()-birthDay.getTime()) + 8 * 60 * 60 * 1000;
+			var sectimeold=timeold/1000
+			var secondsold=Math.floor(sectimeold);
+			var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+			var daysold=Math.floor(e_daysold);
+			var e_hrsold=(daysold-e_daysold)*-24;
+			var hrsold=Math.floor(e_hrsold);
+			var e_minsold=(hrsold-e_hrsold)*-60;
+			var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+			document.getElementById("showsectime").innerHTML = "本网页已萌萌哒运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+			setTimeout(showsectime, 1000);
+		} 
+		showsectime();
+	</script>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2018, 9, 10);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 7000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/music.js"></script>
+	<script type="text/javascript">
+	window.onload = function(){
+		MC.music({
+			hasAjax:false,
+			left:'15%',
+			bottom:'0%',
+			musicChanged:function(ret){
+				// alert(ret.url);
+				// getMusic_buffer(ret.url);
+				// return;
+				var data = ret.data;
+				var index = ret.index;
+				var imageUrl = data[index].img_url;
+				
+				var music_bg = document.getElementById('music-bg');
+				music_bg.style.background = 'url('+imageUrl+')no-repeat';
+				music_bg.style.backgroundSize = 'cover';
+				music_bg.style.backgroundPosition = 'center 30%';
+			},
+
+			getMusicInfo:function(data){
+				
+			},
+
+			musicPlayByWebAudio:function(ret){
+				
+			},
+		});
+	}
+	</script>
+
+</body>
+</html>
