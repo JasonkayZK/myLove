@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/music.css">
 	<link rel="styleshhet" type="text/css" href="css/font-awesome.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
 	<script>
@@ -30,26 +30,56 @@
 	<style type="text/css">
 		#comments {
 			width: 80%;
-			height: 100px;
+			height: 1000px;
 			border: 2px red solid;
 			margin: 5px auto
 		}
 	</style>
 
+	<!-- 设置回到顶部 -->
 	<style type="text/css">
-		.fa-angle-up::before{
-			content: "\f106";
-		}
-	
-	</style>
 
+		#backtop{
+			position: fixed;
+			bottom: .625rem;
+			right: .625rem;
+			height: 3.75rem;
+			width: 3.75rem;
+			cursor: pointer;
+			border-radius: 100%;
+			z-index: 899;
+			text-align: center;
+			font-size: 1.375rem;
+			background: rgba(255, 255, 255, 0.1)
+
+		}
+
+		#backtop i {
+				text-align: center;
+				color: rgb(119, 119, 119);
+				cursor: pointer;
+				margin-right: 0;
+				overflow: hidden;
+
+		}
+
+	</style>
+	<!-- 返回顶部的JS -->
+	<script>
+		function backToTop() {
+			$("html, body").animate({
+				scrollTop: 0
+			}, 600)
+		}
+	</script>
+	
 </head>
 
 <body>
 	<div id="mainDiv">
-		<span id="backtop" class="waves-effect waves-button">
-			<i class="fa fa-angle-up">
-				::before
+		<span id="backtop" class="waves-effect waves-button" onclick="backToTop()">
+			<i>
+				回到顶部
 			</i>
 		</span>
 		<div id="content">
@@ -179,7 +209,6 @@
 	</script>
 
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/music.js"></script>
 	<script type="text/javascript">
 	window.onload = function(){
