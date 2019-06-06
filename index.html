@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/default.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/music.css">
+	<link rel="styleshhet" type="text/css" href="css/font-awesome.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
@@ -26,10 +27,31 @@
 			})();
 	</script>
 			
+	<style type="text/css">
+		#comments {
+			width: 80%;
+			height: 100px;
+			border: 2px red solid;
+			margin: 5px auto
+		}
+	</style>
+
+	<style type="text/css">
+		.fa-angle-up::before{
+			content: "\f106";
+		}
+	
+	</style>
+
 </head>
 
 <body>
 	<div id="mainDiv">
+		<span id="backtop" class="waves-effect waves-button">
+			<i class="fa fa-angle-up">
+				::before
+			</i>
+		</span>
 		<div id="content">
 			<div id="code">
 				<span class="comments">/**</span><br />
@@ -83,6 +105,11 @@
 			<div class="music-mask"></div>
 		</div>
 
+		<div id="comments">
+			<p style="font-size: 20px">
+				comments area.
+			</p>
+		</div>
 
 		<div id="copyright">
 				<span id="showsectime" style="color:#707070;font-size: 14px;">本网页已萌萌哒运行0天0小时0分0秒</span><i class="fa fa-heart throb" style="color:#d43f57">❤</i><br />
